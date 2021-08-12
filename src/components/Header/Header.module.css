@@ -1,0 +1,43 @@
+.header {
+    background-color: #fff;
+}
+
+.header__wrapper {
+    height: 50px;
+    /*background-color: #00ff00;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ------ */
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ------ */
+
+.header__btnToProfile {
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+}
+
+.header__btnToProfile:hover {
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.avatar__name {
+    margin-right: 10px;
+}
+
+.header__avatar {
+    border-radius: 50%;
+    height: 40px;
+}
