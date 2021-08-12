@@ -1,0 +1,25 @@
+.navBar {
+    /*background-color: #fff;*/
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.nav__item a {
+    text-decoration: none;
+    display: flex;
+    padding: 10px 20px;
+    color: #2f66c7;
+    border-radius: 5px;
+}
+
+.nav__item a:hover {
+    background-color: #ddd;
+}
+
+.nav__item a svg {
+    margin-right: 10px;
+}
+
+.nav__item {
+    list-style: none;
+}
