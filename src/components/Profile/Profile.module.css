@@ -1,0 +1,49 @@
+.profile__header {
+    height: 200px;
+    width: 100%;
+    background: url("https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105__340.png") center center / cover;
+    /*border-radius: 5px 5px 0 0;*/
+}
+
+.profile__info {
+    background-color: #fff;
+    padding: 10px;
+    /*border-radius: 0 0 5px 5px;*/
+}
+
+.avatar__photo img {
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.profile__createPost {
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 15px;
+    /*border-radius: 5px;*/
+}
+
+.profile__createPost textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #eeeeee;
+}
+
+.profile__addPost {
+    padding: 10px;
+    background-color: #2f66c7;
+    color: #ffffff;
+    /*border-radius: 5px;*/
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.profile__posts {
+    margin-top: 15px;
+}

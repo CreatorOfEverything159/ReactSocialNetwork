@@ -1,0 +1,12 @@
+.dialog {
+    padding: 10px;
+    text-decoration: none;
+    color: #2f66c7;
+    display: block;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.dialog:hover {
+    background-color: #eeeeee;
+}

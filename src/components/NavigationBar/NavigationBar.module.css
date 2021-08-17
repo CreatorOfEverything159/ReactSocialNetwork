@@ -1,18 +1,35 @@
 .navBar {
-    /*background-color: #fff;*/
-    border-radius: 5px;
-    margin-top: 15px;
+    /*border-radius: 5px;*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 1024px;
+    background-color: #fff;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__item {
+    width: 100%;
+    list-style: none;
 }
 
 .nav__item a {
     text-decoration: none;
     display: flex;
-    padding: 10px 20px;
+    justify-content: center;
+    padding: 10px 0;
     color: #2f66c7;
-    border-radius: 5px;
 }
 
 .nav__item a:hover {
+    background-color: #ddd;
+}
+
+.nav__item a.active {
     background-color: #ddd;
 }
 
@@ -20,6 +37,12 @@
     margin-right: 10px;
 }
 
-.nav__item {
-    list-style: none;
+@media screen and (max-width: 718px) {
+    .nav__itemName {
+        display: none;
+    }
+
+    .nav__item a svg {
+        margin-right: 0;
+    }
 }
