@@ -1,5 +1,4 @@
 import './App.css';
-import Header from "./components/Header/Header";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
@@ -9,19 +8,34 @@ import Friends from "./components/Friends/Friends";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
-const App = () => {
+const App = (props) => {
     return (
         <BrowserRouter>
             <div className="App">
                 <div className="appWrapper">
                     <NavigationBar/>
                     <div className="content">
-                        <Route path="/profile" component={Profile}/>
-                        <Route path="/dialogs" component={Dialogs}/>
-                        <Route path="/news" component={News}/>
-                        <Route path="/friends" component={Friends}/>
-                        <Route path="/music" component={Music}/>
-                        <Route path="/settings" component={Settings}/>
+
+                        <Route path="/profile"
+                               render={() => <Profile
+                                   state={props.state.profilePage}
+                                   addPost={props.addPost}/>}/>
+
+                        <Route path="/dialogs"
+                               render={() => <Dialogs state={props.state.dialogsPage}/>}/>
+
+                        <Route path="/news"
+                               render={News}/>
+
+                        <Route path="/friends"
+                               render={Friends}/>
+
+                        <Route path="/music"
+                               render={Music}/>
+
+                        <Route path="/settings"
+                               render={Settings}/>
+
                     </div>
                 </div>
             </div>
