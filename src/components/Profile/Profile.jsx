@@ -1,18 +1,24 @@
-import React from 'react';
+import React from 'react'
 import styles from './Profile.module.css'
-import Post from "../Post/Post";
+import Post from "../Post/Post"
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../redux/profileReducer";
 
 const Profile = (props) => {
 
-    let posts = props.state.posts.map(post => {
+    let posts = props.profilePage.posts.map(post => {
         return <Post message={post.postMessage} likesCount={post.likesCount}/>
     })
 
     let newPostElement = React.createRef()
 
     const addPost = () => {
-        props.addPost(newPostElement.current.value)
-        newPostElement.current.value = ''
+        props.dispatch(addPostActionCreator())
+    }
+
+    const onPostChange = () => {
+        let text = newPostElement.current.value
+        // let action = {type: 'UPDATE-NEW-POST-TEXT', newText: text,}
+        props.dispatch(updateNewPostTextActionCreator(text))
     }
 
     return (
@@ -27,7 +33,11 @@ const Profile = (props) => {
                 </div>
             </div>
             <div className={styles.profile__createPost}>
-                <textarea ref={newPostElement} name="" id="" cols="30" rows="10" placeholder="Что у вас нового?"/>
+                <textarea
+                    ref={newPostElement}
+                    onChange={onPostChange}
+                    value={props.profilePage.newPostText}
+                    placeholder="Что у вас нового?"/>
                 <button onClick={ addPost } className={styles.profile__addPost}>Опубликовать</button>
             </div>
             <div className={styles.profile__posts}>
@@ -37,4 +47,4 @@ const Profile = (props) => {
     )
 }
 
-export default Profile;
+export default Profile
