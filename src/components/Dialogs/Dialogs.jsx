@@ -28,11 +28,11 @@ const Dialogs = (props) => {
     return (
         <div className={styles.dialogs}>
             <div className={styles.dialogs__items}>
-                {dialogs}
+                { dialogs }
             </div>
             <div className={styles.messages}>
                 <h1 className={styles.dialog__title}>Name</h1>
-                {messages}
+                { messages }
             </div>
             <div className={styles.profile__createMessage}>
                 <textarea
