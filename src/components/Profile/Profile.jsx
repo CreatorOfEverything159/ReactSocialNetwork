@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Profile.module.css'
+import CreatePostContainer from "../CreatePost/CreatePostContainer";
 import Posts from "../Posts/Posts";
-import CreatePost from "../CreatePost/CreatePost";
 
 const Profile = (props) => {
     return (
@@ -15,8 +15,8 @@ const Profile = (props) => {
                     <div className={styles.profile__name}>Name Name</div>
                 </div>
             </div>
-            <CreatePost newPostText={props.profilePage.newPostText} dispatch={props.dispatch}/>
-            <Posts posts={props.profilePage.posts}/>
+            <CreatePostContainer store={props.store}/>
+            <Posts posts={props.store.getState().profilePage.posts}/>
         </div>
     )
 }

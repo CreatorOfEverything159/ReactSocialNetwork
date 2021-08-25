@@ -1,18 +1,17 @@
 import React from 'react';
 import styles from "./CreatePost.module.css";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../redux/profileReducer";
 
 const CreatePost = (props) => {
 
     let newPostElement = React.createRef()
 
-    const addPost = () => {
-        props.dispatch(addPostActionCreator())
+    const onAddPost = () => {
+        props.addPost()
     }
 
     const onPostChange = () => {
         let text = newPostElement.current.value
-        props.dispatch(updateNewPostTextActionCreator(text))
+        props.updateNewPostText(text)
     }
 
     return (
@@ -22,7 +21,7 @@ const CreatePost = (props) => {
                     onChange={onPostChange}
                     value={props.newPostText}
                     placeholder="Что у вас нового?"/>
-            <button onClick={ addPost } className={styles.addPost}>Опубликовать</button>
+            <button onClick={ onAddPost } className={styles.addPost}>Опубликовать</button>
         </div>
     );
 };

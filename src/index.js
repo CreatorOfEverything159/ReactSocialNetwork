@@ -9,8 +9,8 @@ export const renderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <App
-                state={state}
-                dispatch={store.dispatch.bind(store)}
+                store={store}
+                // dispatch={store.dispatch.bind(store)}
             />
         </React.StrictMode>,
         document.getElementById('root')
