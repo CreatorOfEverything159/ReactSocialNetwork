@@ -1,5 +1,5 @@
-import {profileReducer} from "./profileReducer";
-import {dialogReducer} from "./dialogReducer";
+import {profileReducer} from "./profileReducer"
+import {messagesReducer} from "./messagesReducer"
 
 let store = {
     _state: {
@@ -11,7 +11,7 @@ let store = {
             newPostText: '',
         },
 
-        dialogsPage: {
+        messagesPage: {
             messages: [
                 {id: 1, message: "Hi"},
                 {id: 2, message: "adfgsdfgsd"},
@@ -45,10 +45,8 @@ let store = {
     },
 
     dispatch(action) {
-
         this._state.profilePage = profileReducer(this._state.profilePage, action)
-        this._state.dialogsPage = dialogReducer(this._state.dialogsPage, action)
-
+        this._state.messagesPage = messagesReducer(this._state.messagesPage, action)
         this._callSubscriber(this._state)
     }
 }

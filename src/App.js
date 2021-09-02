@@ -1,54 +1,54 @@
-import './App.css';
-import NavigationBar from "./components/NavigationBar/NavigationBar";
-import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
-import {BrowserRouter, Route} from "react-router-dom";
-import News from "./components/News/News";
-import Friends from "./components/Friends/Friends";
-import Music from "./components/Music/Music";
-import Settings from "./components/Settings/Settings";
+import './App.css'
+import NavigationBar from "./components/NavigationBar/NavigationBar"
+import ProfilePage from "./components/ProfilePage/ProfilePage"
+import MessagesPage from "./components/MessagesPage/MessagesPage"
+import {Route} from "react-router-dom"
+import NewsPage from "./components/NewsPage/NewsPage"
+import FriendsPage from "./components/FriendsPage/FriendsPage"
+import MusicPage from "./components/MusicPage/MusicPage"
+import SettingsPage from "./components/SettingsPage/SettingsPage"
 
 const App = (props) => {
     return (
-        <BrowserRouter>
-            <div className="App">
-                <div className="appWrapper">
-                    <NavigationBar/>
-                    <div className="content">
+        <div className="App">
+            <div className="appWrapper">
+                <NavigationBar/>
+                <div className="content">
 
-                        <Route path="/profile"
-                               render={() => <Profile
-                                   store={props.store}
-                               />}
-                        />
+                    <Route
+                        path="/profile"
+                        render={() => <ProfilePage />}
+                    />
 
-                        <Route path="/dialogs"
-                               render={() => <Dialogs
-                                   // store={props.store}
-                                   dialogsPage={props.store.getState().dialogsPage}
-                                   dispatch={props.store.dispatch}
-                                   sendMessage={props.sendMessage}
-                                   updateNewMessageText={props.updateNewMessageText}
-                               />}
-                        />
+                    <Route
+                        path="/dialogs"
+                        render={() => <MessagesPage />}
+                    />
 
-                        <Route path="/news"
-                               render={News}/>
+                    <Route
+                        path="/news"
+                        render={NewsPage}
+                    />
 
-                        <Route path="/friends"
-                               render={Friends}/>
+                    <Route
+                        path="/friends"
+                        render={FriendsPage}
+                    />
 
-                        <Route path="/music"
-                               render={Music}/>
+                    <Route
+                        path="/music"
+                        render={MusicPage}
+                    />
 
-                        <Route path="/settings"
-                               render={Settings}/>
+                    <Route
+                        path="/settings"
+                        render={SettingsPage}
+                    />
 
-                    </div>
                 </div>
             </div>
-        </BrowserRouter>
-    );
+        </div>
+    )
 }
 
-export default App;
+export default App
