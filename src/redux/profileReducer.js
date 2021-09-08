@@ -3,8 +3,11 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 
 let initialState = {
     posts: [
-        {id: 1, postMessage: "Hello!", likesCount: 16},
-        {id: 2, postMessage: "Second post!", likesCount: 193},
+        {id: 1, postMessage: "лес ник увидел, как лиса волочит по полю лису. он подумал, что лиса больна и решил ее" +
+                " лечить. нашел большую черепаху, разрезал ее пополам, положил лису внутрь черепахи и подумал, что скоро вылечит лису. через неделю он позвал лису: «иди сюда, я вылечил тебя». лиса спросила: «а где вторая половина?» «Я склеил ее, когда держал внутри тебя»", likesCount: 16},
+        {id: 2, postMessage: "лес. я его боюсь.", likesCount: 193},
+        {id: Date.now(), postMessage: "лес - это место, где я могу поговорить с природой, если хочу поболтать с" +
+                " людьми, я иду к людям...", likesCount: 10742},
     ],
     newPostText: '',
 }
@@ -31,12 +34,13 @@ export const profileReducer = (state = initialState, action) => {
         default:
             return state
     }
+
 }
 
-export const addPostActionCreator = () => {
+export const addPostAC = () => {
     return { type: ADD_POST }
 }
 
-export const updateNewPostTextActionCreator = (text) => {
+export const updateNewPostTextAC = (text) => {
     return { type: UPDATE_NEW_POST_TEXT, newText: text }
 }

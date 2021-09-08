@@ -3,11 +3,12 @@ const SEND_MESSAGE = 'SEND-MESSAGE'
 
 let initialState = {
     messages: [
-        {id: 1, message: "Hi"},
-        {id: 2, message: "adfgsdfgsd"},
-        {id: 3, message: "Hjhfghjghjfghi"},
-        {id: 4, message: "Hfluyi"},
-        {id: 5, message: "werrtghfdHi"},
+        {id: 1, message: "Жизнь можно сравнить с тем, что происходит, когда мы пытаемся объяснить, например, явление электрического тока"},
+        {id: 2, message: "рок, музыка, песни, песня, русский рок, рок-музыка, рок песни, клипы, хиты, лучшие песни, русский, слушать, все, 2015, 2016, новинки, скачать, бесплатно, без регистрации, аккорды, mp3, текст, guitar, string, басс, текст, аккорды бас, песня под гитару, рок с аккордами, аккорды песни под гитару, популярные песни, видео, новинки шансона, ютуб, песни для детей, популярные, новые, хит, смотреть, онлайн, самые, детские песни, хиты 2013, 2014,"},
+        {id: 3, message: "эдди брок, джон трамп и майлс джереми в фильме"},
+        {id: 4, message: "хех, я тоже буду скучать с:"},
+        {id: 5, message: "вэф, я тебе говорю, чтобы ты никогда не смотрела в сторону этого телефона. почему? потому" +
+                " что он будет у тебя через пару месяцев после того, как ты его купишь. ты меня поняла с:"},
     ],
     dialogs: [
         {id: 1, name: "Bkagw45y4mz"},
@@ -41,10 +42,10 @@ export const messagesReducer = (state = initialState, action) => {
     }
 }
 
-export const updateNewMessageTextActionCreator = (text) => {
+export const updateNewMessageTextAC = (text) => {
     return { type: UPDATE_NEW_MESSAGE_TEXT, newText: text }
 }
 
-export const sendMessageActionCreator = () => {
+export const sendMessageAC = () => {
     return { type: SEND_MESSAGE }
 }

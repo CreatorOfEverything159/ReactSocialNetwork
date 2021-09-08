@@ -4,7 +4,7 @@ import React from "react"
 const Post = (props) => {
     return (
         <div className={styles.profile__post}>
-            <div className={styles.post__text}>{props.message}</div>
+            <p className={styles.post__text}>{props.message}</p>
             <div className={styles.post__likesCount}>{props.likesCount} лайков</div>
         </div>
     )

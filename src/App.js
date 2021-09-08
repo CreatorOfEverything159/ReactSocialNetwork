@@ -32,7 +32,7 @@ const App = (props) => {
 
                     <Route
                         path="/friends"
-                        render={FriendsPage}
+                        render={() => <FriendsPage />}
                     />
 
                     <Route

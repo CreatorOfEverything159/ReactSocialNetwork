@@ -13,12 +13,6 @@ html, body {
     height: 100%;
 }
 
-/* Container */
-/*.container {*/
-/*    max-width: 1024px;*/
-/*    margin: 0 auto;*/
-/*}*/
-
 .appWrapper {
     max-width: 1024px;
     width: 100%;
@@ -31,6 +25,6 @@ html, body {
     }
 }
 
-/*.content {*/
-/*    grid-area: content;*/
-/*}*/
+.content {
+    padding-bottom: 60px;
+}

@@ -2,13 +2,11 @@
     height: 200px;
     width: 100%;
     background: url("https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105__340.png") center center / cover;
-    /*border-radius: 5px 5px 0 0;*/
 }
 
 .profile__info {
     background-color: #fff;
     padding: 10px;
-    /*border-radius: 0 0 5px 5px;*/
 }
 
 .avatar__photo img {

@@ -10,7 +10,7 @@ const ProfilePage = (props) => {
             <div className={styles.profile__info}>
                 <div className={styles.profile__avatar}>
                     <div className={styles.avatar__photo}>
-                        <img src="https://html5css.ru/w3images/avatar2.png" alt=""/>
+                        <img src="https://html5css.ru/w3images/avatar2.png"/>
                     </div>
                     <div className={styles.profile__name}>Name Name</div>
                 </div>
