@@ -1,0 +1,11 @@
+.selectedPage {
+    font-weight: 900;
+}
+
+span {
+    margin-left: 10px;
+}
+
+span:hover {
+    cursor: pointer;
+}
